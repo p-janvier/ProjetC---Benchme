@@ -1,0 +1,1 @@
+void tri_selection(float *tab, int longueur);

@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-void tri_selection(float *tab, int n)
+void tri_selection(float *tab, int longueur)
 {
     int min, temp;
 
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < longueur - 1; i++)
     {
         min = i;
-        for (int j = i + 1; j < n; j++)
+        for (int j = i + 1; j < longueur; j++)
             if (tab[j] < tab[min])
                 min = j;
         if (min != i)

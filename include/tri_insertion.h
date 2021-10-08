@@ -1,0 +1,1 @@
+void tri_insertion(float *tab, int longueur)

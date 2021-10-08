@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void tri_insertion(float *t, int longueur)
+void tri_insertion(float *tab, int longueur)
 {
     int i, j;
     float en_cours;
 
     for (i = 0; i < longueur; i++)
     {
-        en_cours = t[i];
-        for (j = i; j > 0 && t[j - 1] > en_cours; j--)
+        en_cours = tab[i];
+        for (j = i; j > 0 && tab[j - 1] > en_cours; j--)
         {
-            t[j] = t[j - 1];
+            tab[j] = tab[j - 1];
         }
-        t[j] = en_cours;
+        tab[j] = en_cours;
     }
 }
