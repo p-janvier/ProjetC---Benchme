@@ -24,7 +24,7 @@ int main()
 		printf("%.f ", T[i]);
 	} */
 
-	//Test function tri_insertion()
+	/* 	//Test function tri_insertion()
 	float T[] = {173, 83, 170, 71, 41, 76, 150, 184, 12, 185, 169, 59, 89, 116, 138, 140, 24, 176, 68, 23, 104, 131, 148, 163, 141, 159, 1, 93, 65, 95, 46, 7, 82, 64, 56, 24};
 	debut = clock();
 	tri_insertion(T, 10);
@@ -34,5 +34,14 @@ int main()
 	for (int i = 0; i < 10; i++)
 	{
 		printf("%.f ", T[i]);
+	} */
+
+	//Test function tri_tas()
+	float T[] = {11, 34, 9.5, 5, 16, 10, 1, 21, 7, 25};
+	tri_tas(T, 10);
+	for (int i = 0; i < 10; ++i)
+	{
+		printf("%.2f ", T[i]);
 	}
+	printf("\n");
 }
