@@ -6,8 +6,31 @@
 #include "../include/tri_selection.h"
 #include "../include/tri_tas.h" */
 
+
+void create_csv(char *filename, float csvtab[5][7]){
+
+	FILE *fp;
+	printf("%s", filename);
+	fp = fopen(filename,"+w");
+
+	fprintf(fp,"Taille tableau / tri","Tri à bulle","Tri par sélection","Tri par insertion","Tri par tas");
+	fprintf(fp,"100",csvtab[0][0],csvtab[0][1],csvtab[0][2],csvtab[0][3]);
+	fprintf(fp,"10³",csvtab[1][0],csvtab[1][1],csvtab[1][2],csvtab[1][3]);
+	fprintf(fp,"10⁴",csvtab[2][0],csvtab[2][1],csvtab[2][2],csvtab[2][3]);
+	fprintf(fp,"10⁵",csvtab[3][0],csvtab[3][1],csvtab[3][2],csvtab[3][3]);
+	fprintf(fp,"10⁶",csvtab[4][0],csvtab[4][1],csvtab[4][2],csvtab[4][3]);
+	fprintf(fp,"10⁷",csvtab[5][0],csvtab[5][1],csvtab[5][2],csvtab[5][3]);
+
+	fclose(fp);
+	printf("Fichier %s modifié !", filename);
+}
+
 int main()
 {
+
+	//Tableau permettant de récupérer les valeurs du CSV
+	float csvtab[5][7];
+
 	clock_t debut, fin; //temps de debut et de fin en micro seconde
 	//initialisation de des variable de temps moyen pour les differents tries et des variable permetant de stoquer le temps a chaque teste des tries
 	float temp_bulle, temp_insert, temp_tas, temp_selec, temp_total[2];
@@ -26,17 +49,17 @@ int main()
 	//set des trois liste de valeur aleatoire dans un tableau global
 	for (int i = 0; i < taille; i++)
 	{
-		int nb = rand() % 100 + 1;
+		int nb = rand() % 1000000 + 1;
 		tab_global[0][i] = ((float)rand() / (float)(RAND_MAX)) + nb;
 	}
 	for (int j = 0; j < taille; j++)
 	{
-		int nb = rand() % 100 + 1;
+		int nb = rand() % 1000000 + 1;
 		tab_global[1][j] = ((float)rand() / (float)(RAND_MAX)) + nb;
 	}
 	for (int k = 0; k < taille; k++)
 	{
-		int nb = rand() % 100 + 1;
+		int nb = rand() % 1000000 + 1;
 		tab_global[2][k] = ((float)rand() / (float)(RAND_MAX)) + nb;
 	}
 
@@ -143,4 +166,9 @@ int main()
 	//calcule et affichage de la moyene des different temps en ms pour tri_tas
 	temp_tas = (temp_total[0] + temp_total[1] + temp_total[2]) / 3;
 	printf("la moyenne de temps pour les differents testes de tri_tas est de : %.2f ms\n", temp_tas);
+
+
+	printf("Fin.");
+	/* create_csv(?,csvtab); */
+	printf("Programme terminé.");
 }
