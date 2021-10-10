@@ -20,12 +20,12 @@
  * @param filename 
  * @param csvtab 
 */
-void create_csv(char *filename, float csvtab[5][3])
+void create_csv(char *filename, float csvtab[6][4])
 {
 
 	FILE *fp;
 	printf("%s", filename);
-	fp = fopen("benchme_result.csv", "w");
+	fp = fopen("benchme_result.csv", "a");
 
 	//Définition du model du fichier .csv qui va être généré
 	fprintf(fp, "Taille tableau / tri, Tri à bulle, Tri par sélection, Tri par insertion, Tri par tas\n");
