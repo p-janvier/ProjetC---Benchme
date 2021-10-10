@@ -1,7 +1,21 @@
+/**
+ * @file tri_tas.c
+ * @authors Pierre JANVIER et Oscar SAPY
+ * @brief Ce fichier contient la fonction de tri par tas
+ * @version 1.0
+ * @date 2021-10-10
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * @brief Cette fonction permet l'inversement de 2 valeurs
+ * @param a 
+ * @param b 
+ */
 void swap(int *a, int *b)
 {
     int temp = *a;
@@ -9,6 +23,12 @@ void swap(int *a, int *b)
     *b = temp;
 }
 
+/**
+ * @brief Cette fonction permet de restructurer notre tas en arbre binaire afin de ranger les noeuds
+ * @param tab 
+ * @param n 
+ * @param i 
+ */
 void heapify(int tab[], int n, int i)
 {
     int max = i; //Initialize max as root
@@ -32,6 +52,11 @@ void heapify(int tab[], int n, int i)
     }
 }
 
+/**
+ * @brief Cette fonction permet de trier un tableau grâce à l'agorithme de tri par tas
+ * @param tab 
+ * @param longueur 
+ */
 void tri_tas(float *tab, int longueur)
 {
     //Rearrange array (building heap)

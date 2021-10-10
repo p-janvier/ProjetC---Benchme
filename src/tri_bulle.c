@@ -1,7 +1,21 @@
+/**
+ * @file tri_bulle.c
+ * @authors Pierre JANVIER et Oscar SAPY
+ * @brief Ce fichier contient la fonction de tri à bulle
+ * @version 1.0
+ * @date 2021-10-10
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
+/**
+ * @brief Cette fonction permet de trier un tableau grâce à l'agorithme de tri à bulle
+ * @param tab 
+ * @param longueur 
+ */
 void tri_bulle(float *tab, int longueur)
 {
     float temporaire;

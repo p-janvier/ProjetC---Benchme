@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "stdlib.h": "c",
-        "tri_insertion.h": "c"
+        "tri_insertion.h": "c",
+        "tri_bulle.h": "c"
     }
 }
