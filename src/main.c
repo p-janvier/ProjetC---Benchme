@@ -44,7 +44,7 @@ int main()
 {
 
 	//Initialisation d'un tableau permettant de récupérer les valeurs du CSV
-	float csvtab[5][3];
+	float csvtab[6][4];
 
 	//Initialisation de nos variables de temps en millisecondes
 	clock_t debut, fin;
