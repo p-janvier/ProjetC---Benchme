@@ -28,13 +28,13 @@ void create_csv(char *filename, float csvtab[6][4])
 	fp = fopen("benchme_result.csv", "a");
 
 	//Définition du model du fichier .csv qui va être généré
-	fprintf(fp, "Taille tableau / tri, Tri à bulle, Tri par sélection, Tri par insertion, Tri par tas\n");
-	fprintf(fp, "100, %.2f, %.2f, %.2f, %.2f\n", csvtab[0][0], csvtab[0][1], csvtab[0][2], csvtab[0][3]);
-	fprintf(fp, "10³, %.2f, %.2f, %.2f, %.2f\n", csvtab[1][0], csvtab[1][1], csvtab[1][2], csvtab[1][3]);
-	fprintf(fp, "10⁴, %.2f, %.2f, %.2f, %.2f\n", csvtab[2][0], csvtab[2][1], csvtab[2][2], csvtab[2][3]);
-	fprintf(fp, "10⁵, %.2f, %.2f, %.2f, %.2f\n", csvtab[3][0], csvtab[3][1], csvtab[3][2], csvtab[3][3]);
-	fprintf(fp, "10⁶, %.2f, %.2f, %.2f, %.2f\n", csvtab[4][0], csvtab[4][1], csvtab[4][2], csvtab[4][3]);
-	fprintf(fp, "10⁷, %.2f, %.2f, %.2f, %.2f\n", csvtab[5][0], csvtab[5][1], csvtab[5][2], csvtab[5][3]);
+	fprintf(fp, "Taille du tableau, Tri à bulle, Tri par sélection, Tri par insertion, Tri par tas\n");
+	fprintf(fp, "100, %.2f ms moyenne, %.2f ms moyenne, %.2f ms moyenne, %.2f ms moyenne\n", csvtab[0][0], csvtab[0][1], csvtab[0][2], csvtab[0][3]);
+	fprintf(fp, "10³, %.2f ms moyenne, %.2f ms moyenne, %.2f ms moyenne, %.2f ms moyenne\n", csvtab[1][0], csvtab[1][1], csvtab[1][2], csvtab[1][3]);
+	fprintf(fp, "10⁴, %.2f ms moyenne, %.2f ms moyenne, %.2f ms moyenne, %.2f ms moyenne\n", csvtab[2][0], csvtab[2][1], csvtab[2][2], csvtab[2][3]);
+	fprintf(fp, "10⁵, %.2f ms moyenne, %.2f ms moyenne, %.2f ms moyenne, %.2f ms moyenne\n", csvtab[3][0], csvtab[3][1], csvtab[3][2], csvtab[3][3]);
+	fprintf(fp, "10⁶, %.2f ms moyenne, %.2f ms moyenne, %.2f ms moyenne, %.2f ms moyenne\n", csvtab[4][0], csvtab[4][1], csvtab[4][2], csvtab[4][3]);
+	fprintf(fp, "10⁷, %.2f ms moyenne, %.2f ms moyenne, %.2f ms moyenne, %.2f ms moyenne\n", csvtab[5][0], csvtab[5][1], csvtab[5][2], csvtab[5][3]);
 
 	fclose(fp);
 	printf("Fichier %s modifié !\n", filename);

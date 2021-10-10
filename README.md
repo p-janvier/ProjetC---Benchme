@@ -58,13 +58,25 @@ L'objectif de ce TP est d'implémenter 4 algorithmes de tri (le tri à bulle, le
 
 <br>
 
+## *Éxécution du programme*
+
+<br>
+
+Afin d'éxécuter le programme et de mettre à jour le fichier .csv, vous devez simplement lancer le programme via la touche `F5` de votre clavier ou via le terminal en lancant le fichier `main.c`.<br>
+Grâce à ca vous pourrez voir les résultats des tests que vous venez d'effectuer.
+
+<br>
+<br>
+<br>
+
 ## *Génération de la documentation*
 
 <br>
 
 Pour générer la documentation du projet, lancez un terminal et exécutez la commande `make documentation`.<br>
-Afin de consulter la documentation générée il vous faudra ouvrir le dossier "html" présent dans le répertoire du projet, puis de lancer le fichier "index.html".<br>
-Si le code est amené à évoluer avec de nouveaux algorithmes de tris, il ne faut pas oublier d'effectuer la commande `make documentation` afin de garder la documentation du projet à jour.<br>
+Afin de consulter la documentation générée il vous faudra exécuter la commande suivante : `firefox /Chemin_Absolu_Du_Répertoire_Du_Projet/ProjetC---Benchme/html/index.html`.<br>
+Si vous n'y parvenez pas avec la commande précédente il vous faudra ouvrir le dossier "html" présent dans le répertoire du projet, puis de lancer le fichier "index.html".<br>
+Si le code est amené à évoluer avec de nouveaux algorithmes de tris, il ne faut pas oublier d'effectuer la commande `make documentation` afin de garder la documentation du projet à jour.
 
 <br>
 <br>
