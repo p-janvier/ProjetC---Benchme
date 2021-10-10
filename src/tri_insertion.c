@@ -6,7 +6,7 @@
  * @date 2021-10-10
  * @copyright Copyright (c) 2021
  * 
- */
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -14,7 +14,7 @@
  * @brief Cette fonction permet de trier un tableau grâce à l'agorithme de tri par insertion
  * @param tab 
  * @param longueur 
- */
+*/
 void tri_insertion(float *tab, int longueur)
 {
     int i, j;
