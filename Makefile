@@ -52,8 +52,12 @@ clean:
 run: all
 	./$(BIN)/$(EXECUTABLE)
 
+.PHONY: documentation
 documentation:
-	-doxygen $(DOXYGENCONF)
+	@doxygen Doxyfile
+	firefox ./output/html/index.html
+	@echo Documentation generation complete !
+
 
 $(BIN)/$(EXECUTABLE): $(OBJECTS)
 	$(CC) $(CFLAGS) $(CINCLUDES) $(CLIBS) $^ -o $@ $(LIBRARIES)
